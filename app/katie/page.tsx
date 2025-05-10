@@ -47,7 +47,7 @@ export default function KatieLinksPage() {
     <div>
       <CharacterLinksPage
         name="Katie"
-        avatar="https://cdn.discordapp.com/attachments/1367006734907871302/1367006829640683540/Katie1.png?ex=681303d1&is=6811b251&hm=88c195c0bfa9922d2d11f3792bddc72ea2886ba6040672df0ef9a0b8d1dd287f&"
+        avatar="https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Katie.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvS2F0aWUuanBnIiwiaWF0IjoxNzQ2OTExNzc0LCJleHAiOjE5MDQ1OTE3NzR9.t-KF0aI3AdLZKc7YpooUL5fR0TiEoMgdIuNeL-7OPnk"
         bio="Sweet, caring, and always up for adventure. Let's connect!"
         accentColor={accentColor}
         links={links}
