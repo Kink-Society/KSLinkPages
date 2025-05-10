@@ -47,7 +47,7 @@ export default function CrystalLinksPage() {
     <div>
       <CharacterLinksPage
         name="Crystal"
-        avatar="https://cdn.discordapp.com/attachments/1367006734907871302/1367006763764940841/Crystal1.png?ex=681303c2&is=6811b242&hm=ca7aacd12551bbdd8b156c661f550b817f3e2e6c5048c92e1de271208609e331&"
+        avatar="https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Crystal.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvQ3J5c3RhbC5qcGVnIiwiaWF0IjoxNzQ2OTExNzE0LCJleHAiOjE5MDQ1OTE3MTR9.On7PEw9i-QCdBpQo7SnXqzMRk4ijgtWUobU9EwPCZtI"
         bio="Your playful and adventurous companion. Let's explore together!"
         accentColor={accentColor}
         links={links}
