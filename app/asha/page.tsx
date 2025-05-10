@@ -47,7 +47,7 @@ export default function AshaLinksPage() {
     <div>
       <CharacterLinksPage
         name="Asha"
-        avatar="https://cdn.discordapp.com/attachments/1367006734907871302/1367006802163535902/Asha1.png?ex=681303cb&is=6811b24b&hm=6030bcf82447ace706373514904a156d54365bb39d048cb2c7dc29a53e5abb26&"
+        avatar="https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Asha.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvQXNoYS5qcGciLCJpYXQiOjE3NDY5MTE2NzMsImV4cCI6MTkwNDU5MTY3M30.tM5MTx9rLzq9OyB3lmB6UWSP71OCqa7JUoD8waALYHM"
         bio="Passionate and mysterious. Ready to share unforgettable moments."
         accentColor={accentColor}
         links={links}
