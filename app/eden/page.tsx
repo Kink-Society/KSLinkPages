@@ -47,7 +47,7 @@ export default function EdenLinksPage() {
     <div>
       <CharacterLinksPage
         name="Eden"
-        avatar="https://cdn.discordapp.com/attachments/1367006734907871302/1367006847868997683/Eden1.png?ex=681303d6&is=6811b256&hm=84820a5e652cdfc0608f75e9c91dc633d175e41a2d3c1a8b5de761c8974b5130&"
+        avatar="https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Eden.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvRWRlbi5qcGVnIiwiaWF0IjoxNzQ2OTExNzQ1LCJleHAiOjE5MDQ1OTE3NDV9.JGuGFuFsa2XTCNo-LNidSDOv8j_SKkKpbZ5lJ7A0eOQ"
         bio="Mysterious and alluring. Ready to take you on a journey of discovery."
         accentColor={accentColor}
         links={links}
