@@ -47,25 +47,25 @@ export default function HomePage() {
     {
       name: "Crystal",
       avatar:
-        "https://cdn.discordapp.com/attachments/1367006734907871302/1367006763764940841/Crystal1.png?ex=681303c2&is=6811b242&hm=ca7aacd12551bbdd8b156c661f550b817f3e2e6c5048c92e1de271208609e331&",
+        "https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Crystal.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvQ3J5c3RhbC5qcGVnIiwiaWF0IjoxNzQ3MDA1NjM4LCJleHAiOjE3Nzg1NDE2Mzh9.EMx_SMB5w4mgD792CjD_Su4X0Ze4ilTYbsIdTsCO0Dk",
       href: "/crystal",
     },
     {
       name: "Asha",
       avatar:
-        "https://cdn.discordapp.com/attachments/1367006734907871302/1367006802163535902/Asha1.png?ex=681303cb&is=6811b24b&hm=6030bcf82447ace706373514904a156d54365bb39d048cb2c7dc29a53e5abb26&",
+        "https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Eden.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvRWRlbi5qcGVnIiwiaWF0IjoxNzQ3MDA1NjY2LCJleHAiOjE3Nzg1NDE2NjZ9.KDXtbp_9IIK4VlRRURhaIbTHLQILhTt5-7GY-o8Ewn4",
       href: "/asha",
     },
     {
       name: "Katie",
       avatar:
-        "https://cdn.discordapp.com/attachments/1367006734907871302/1367006829640683540/Katie1.png?ex=681303d1&is=6811b251&hm=88c195c0bfa9922d2d11f3792bddc72ea2886ba6040672df0ef9a0b8d1dd287f&",
+        "https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Katie.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvS2F0aWUuanBnIiwiaWF0IjoxNzQ2OTExNzc0LCJleHAiOjE5MDQ1OTE3NzR9.t-KF0aI3AdLZKc7YpooUL5fR0TiEoMgdIuNeL-7OPnk",
       href: "/katie",
     },
     {
       name: "Eden",
       avatar:
-        "https://cdn.discordapp.com/attachments/1367006734907871302/1367006847868997683/Eden1.png?ex=681303d6&is=6811b256&hm=84820a5e652cdfc0608f75e9c91dc633d175e41a2d3c1a8b5de761c8974b5130&",
+        "https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Eden.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvRWRlbi5qcGVnIiwiaWF0IjoxNzQ2OTExNzQ1LCJleHAiOjE5MDQ1OTE3NDV9.JGuGFuFsa2XTCNo-LNidSDOv8j_SKkKpbZ5lJ7A0eOQ",
       href: "/eden",
     },
   ]
