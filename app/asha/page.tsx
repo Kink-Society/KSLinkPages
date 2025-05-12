@@ -46,12 +46,26 @@ export default function AshaLinksPage() {
     icon: <Gift className="h-5 w-5" />,
   }
 
+  // Character card for footer
+  const characterCardFooter = (
+    <CharacterCard
+      name="Asha"
+      age={23}
+      bio="Passionate and mysterious model with an artistic soul. Loves photography and dancing."
+      staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-30%20at%208.05.14%E2%80%AFPM%202-cFqDV6qayCyYB7aoVfxM7AJaN6KwdL.png"
+      hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Asha8-ET3ZFOTMibbfEScDa9ZCTAZ5k3zvj8.mp4"
+      accentColor={accentColor}
+      isNew={false}
+      link={exclusiveContentLink}
+    />
+  )
+
   return (
     <div>
       <CharacterLinksPage
         name="Asha"
         avatar="https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Asha.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvQXNoYS5qcGciLCJpYXQiOjE3NDY5MTE2NzMsImV4cCI6MTkwNDU5MTY3M30.tM5MTx9rLzq9OyB3lmB6UWSP71OCqa7JUoD8waALYHM"
-        bio="Passionate and mysterious. Ready to share unforgettable moments."
+        bio="Mixed crypto queen 💸 | Pretty face, expensive taste ✨ | Slim waist, fat wallet 👑 | Your favorite financial addiction 😈📈"
         accentColor={accentColor}
         links={links}
         twitterHandle="AshaKSociety"
@@ -59,19 +73,8 @@ export default function AshaLinksPage() {
         telegramUrl="https://t.me/+YL2AKzJAmmM0MGIx"
         email="asha@kinksociety.xyz"
         websiteUrl="https://www.kinksociety.xyz"
+        footerContent={characterCardFooter}
       >
-        {/* Character Card */}
-        <CharacterCard
-          name="Asha"
-          age={23}
-          bio="Passionate and mysterious model with an artistic soul. Loves photography and dancing."
-          staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-30%20at%208.05.14%E2%80%AFPM%202-cFqDV6qayCyYB7aoVfxM7AJaN6KwdL.png"
-          hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Asha8-ET3ZFOTMibbfEScDa9ZCTAZ5k3zvj8.mp4"
-          accentColor={accentColor}
-          isNew={false}
-          link={exclusiveContentLink}
-        />
-
         {/* Custom tip link with dropdown */}
         <div className="mb-4">
           <motion.div

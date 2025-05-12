@@ -46,12 +46,26 @@ export default function KatieLinksPage() {
     icon: <Gift className="h-5 w-5" />,
   }
 
+  // Character card for footer
+  const characterCardFooter = (
+    <CharacterCard
+      name="Katie"
+      age={25}
+      bio="PAWG Princess 🍑 | Snowbunny Brat ❄️✨ | Mommy plays, Daddy stays 😈 | Your favorite guilty pleasure 💦🔐"
+      staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/857724468431208396-8woA3knKSTHWDDJYTFGzdu9dg3YnWa.png"
+      hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Standard_Mode_Woman_blows_a_kiss_to_the_camera-HSjUN5ngQKtw8v4enogLAfcVwlKoxF.mp4"
+      accentColor={accentColor}
+      isNew={false}
+      link={exclusiveContentLink}
+    />
+  )
+
   return (
     <div>
       <CharacterLinksPage
         name="Katie"
         avatar="https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Katie.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvS2F0aWUuanBnIiwiaWF0IjoxNzQ2OTExNzc0LCJleHAiOjE5MDQ1OTE3NzR9.t-KF0aI3AdLZKc7YpooUL5fR0TiEoMgdIuNeL-7OPnk"
-        bio="Sweet, caring, and always up for adventure. Let's connect!"
+        bio="PAWG Princess 🍑 | Snowbunny Brat ❄️✨ | Mommy plays, Daddy stays 😈 | Your favorite guilty pleasure 💦🔐"
         accentColor={accentColor}
         links={links}
         twitterHandle="KatieKSociety"
@@ -59,19 +73,8 @@ export default function KatieLinksPage() {
         telegramUrl="https://t.me/+YL2AKzJAmmM0MGIx"
         email="katie@kinksociety.xyz"
         websiteUrl="https://www.kinksociety.xyz"
+        footerContent={characterCardFooter}
       >
-        {/* Character Card */}
-        <CharacterCard
-          name="Katie"
-          age={25}
-          bio="Sweet and caring model who loves adventures. Enjoys travel and meeting new people."
-          staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/857724468431208396-8woA3knKSTHWDDJYTFGzdu9dg3YnWa.png"
-          hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Standard_Mode_Woman_blows_a_kiss_to_the_camera-HSjUN5ngQKtw8v4enogLAfcVwlKoxF.mp4"
-          accentColor={accentColor}
-          isNew={false}
-          link={exclusiveContentLink}
-        />
-
         {/* Custom tip link with dropdown */}
         <div className="mb-4">
           <motion.div

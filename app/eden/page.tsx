@@ -46,12 +46,26 @@ export default function EdenLinksPage() {
     icon: <Gift className="h-5 w-5" />,
   }
 
+  // Character card for footer
+  const characterCardFooter = (
+    <CharacterCard
+      name="Eden"
+      age={22}
+      bio="Certified troublemaker👅 | Pretty face, dangerous taste✨ | Taking hearts, breaking homes💔 | Your favorite guilty pleasure 😈🔥"
+      staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/858045519384071372-lJicTbuiP2ncIketXu3u3RwEL5GRHI.png"
+      hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Standard_Mode_Woman_waves_at_the_camera_with_a-e0Ib4LbIgUbzEDf1O7bDArzM5T28ma.mp4"
+      accentColor={accentColor}
+      isNew={false}
+      link={exclusiveContentLink}
+    />
+  )
+
   return (
     <div>
       <CharacterLinksPage
         name="Eden"
         avatar="https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Eden.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvRWRlbi5qcGVnIiwiaWF0IjoxNzQ2OTExNzQ1LCJleHAiOjE5MDQ1OTE3NDV9.JGuGFuFsa2XTCNo-LNidSDOv8j_SKkKpbZ5lJ7A0eOQ"
-        bio="Mysterious and alluring. Ready to take you on a journey of discovery."
+        bio="Certified troublemaker👅 | Pretty face, dangerous taste✨ | Taking hearts, breaking homes💔 | Your favorite guilty pleasure 😈🔥"
         accentColor={accentColor}
         links={links}
         twitterHandle="EdenKSociety"
@@ -59,19 +73,8 @@ export default function EdenLinksPage() {
         telegramUrl="https://t.me/+YL2AKzJAmmM0MGIx"
         email="eden@kinksociety.xyz"
         websiteUrl="https://www.kinksociety.xyz"
+        footerContent={characterCardFooter}
       >
-        {/* Character Card */}
-        <CharacterCard
-          name="Eden"
-          age={22}
-          bio="Mysterious and alluring model with a passion for nature. Loves outdoor photoshoots and yoga."
-          staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/858045519384071372-lJicTbuiP2ncIketXu3u3RwEL5GRHI.png"
-          hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Standard_Mode_Woman_waves_at_the_camera_with_a-e0Ib4LbIgUbzEDf1O7bDArzM5T28ma.mp4"
-          accentColor={accentColor}
-          isNew={false}
-          link={exclusiveContentLink}
-        />
-
         {/* Custom tip link with dropdown */}
         <div className="mb-4">
           <motion.div

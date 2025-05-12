@@ -32,6 +32,7 @@ interface CharacterLinksPageProps {
   email?: string
   websiteUrl?: string
   children?: React.ReactNode
+  footerContent?: React.ReactNode
 }
 
 export function CharacterLinksPage({
@@ -46,6 +47,7 @@ export function CharacterLinksPage({
   email,
   websiteUrl,
   children,
+  footerContent,
 }: CharacterLinksPageProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
@@ -180,6 +182,9 @@ export function CharacterLinksPage({
             </motion.div>
           ))}
         </div>
+
+        {/* Footer Content */}
+        {footerContent && <div className="mt-8 mb-8">{footerContent}</div>}
 
         {/* Copyright Footer */}
         <div className="text-center text-xs text-zinc-500 mt-8 pb-4">

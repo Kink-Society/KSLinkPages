@@ -46,12 +46,26 @@ export default function CrystalLinksPage() {
     icon: <Gift className="h-5 w-5" />,
   }
 
+  // Character card for footer
+  const characterCardFooter = (
+    <CharacterCard
+      name="Crystal"
+      age={24}
+      bio="Brown skin baddie 🍫 | Curls poppin', melanin glowin' ✨| Thick thighs & pretty eyes 👑 | His favorite toxic obsession 😈💦"
+      staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Crystal11-cpgyCFtrYvj1SuUnidGiuV7LPRZEcV.png"
+      hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BWBQF9H3SZCK4W53EW5KTA3Q40-jEzpVhQELNQhetSWj9NlwoQRD7KaWi.mp4"
+      accentColor={accentColor}
+      isNew={false}
+      link={exclusiveContentLink}
+    />
+  )
+
   return (
     <div>
       <CharacterLinksPage
         name="Crystal"
         avatar="https://mxbxsaruvnheilougvap.supabase.co/storage/v1/object/sign/admin-content/Profile%20Pictures/Crystal.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhZG1pbi1jb250ZW50L1Byb2ZpbGUgUGljdHVyZXMvQ3J5c3RhbC5qcGVnIiwiaWF0IjoxNzQ3MDA1NjM4LCJleHAiOjE3Nzg1NDE2Mzh9.EMx_SMB5w4mgD792CjD_Su4X0Ze4ilTYbsIdTsCO0Dk"
-        bio="Your playful and adventurous companion. Let's explore together!"
+        bio="Brown skin baddie 🍫 | Curls poppin', melanin glowin' ✨| Thick thighs & pretty eyes 👑 | His favorite toxic obsession 😈💦"
         accentColor={accentColor}
         links={links}
         twitterHandle="CrystalKSociety"
@@ -59,19 +73,8 @@ export default function CrystalLinksPage() {
         telegramUrl="https://t.me/+YL2AKzJAmmM0MGIx"
         email="crystal@kinksociety.xyz"
         websiteUrl="https://www.kinksociety.xyz"
+        footerContent={characterCardFooter}
       >
-        {/* Character Card */}
-        <CharacterCard
-          name="Crystal"
-          age={24}
-          bio="Playful and adventurous model from Miami. Loves beach days and exciting nights."
-          staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Crystal11-cpgyCFtrYvj1SuUnidGiuV7LPRZEcV.png"
-          hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BWBQF9H3SZCK4W53EW5KTA3Q40-jEzpVhQELNQhetSWj9NlwoQRD7KaWi.mp4"
-          accentColor={accentColor}
-          isNew={false}
-          link={exclusiveContentLink}
-        />
-
         {/* Custom tip link with dropdown */}
         <div className="mb-4">
           <motion.div
