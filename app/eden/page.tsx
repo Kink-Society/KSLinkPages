@@ -6,6 +6,7 @@ import { MessageCircle, Gift, Heart, Lock } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { HelioDropdown } from "@/components/helio-checkout"
+import { CharacterCard } from "@/components/character-card"
 
 export default function EdenLinksPage() {
   const [tipDropdownOpen, setTipDropdownOpen] = useState(false)
@@ -13,12 +14,14 @@ export default function EdenLinksPage() {
 
   const accentColor = "#91ffb7"
 
+  const exclusiveContentLink = "https://www.kinksociety.xyz/profiles"
+
   const links = [
     {
       title: "Exclusive Content",
       description: "Access Eden's premium content",
       icon: <Lock className="h-5 w-5" />,
-      href: "https://www.kinksociety.xyz/profiles",
+      href: exclusiveContentLink,
       highlight: true,
     },
     {
@@ -57,6 +60,18 @@ export default function EdenLinksPage() {
         email="eden@kinksociety.xyz"
         websiteUrl="https://www.kinksociety.xyz"
       >
+        {/* Character Card */}
+        <CharacterCard
+          name="Eden"
+          age={22}
+          bio="Mysterious and alluring model with a passion for nature. Loves outdoor photoshoots and yoga."
+          staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/858045519384071372-lJicTbuiP2ncIketXu3u3RwEL5GRHI.png"
+          hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Standard_Mode_Woman_waves_at_the_camera_with_a-e0Ib4LbIgUbzEDf1O7bDArzM5T28ma.mp4"
+          accentColor={accentColor}
+          isNew={false}
+          link={exclusiveContentLink}
+        />
+
         {/* Custom tip link with dropdown */}
         <div className="mb-4">
           <motion.div

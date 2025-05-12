@@ -6,6 +6,7 @@ import { MessageCircle, Gift, Heart, Lock } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { HelioDropdown } from "@/components/helio-checkout"
+import { CharacterCard } from "@/components/character-card"
 
 export default function KatieLinksPage() {
   const [tipDropdownOpen, setTipDropdownOpen] = useState(false)
@@ -13,12 +14,14 @@ export default function KatieLinksPage() {
 
   const accentColor = "#ff91c1"
 
+  const exclusiveContentLink = "https://www.kinksociety.xyz/profiles"
+
   const links = [
     {
       title: "Exclusive Content",
       description: "Access Katie's premium content",
       icon: <Lock className="h-5 w-5" />,
-      href: "https://www.kinksociety.xyz/profiles",
+      href: exclusiveContentLink,
       highlight: true,
     },
     {
@@ -57,6 +60,18 @@ export default function KatieLinksPage() {
         email="katie@kinksociety.xyz"
         websiteUrl="https://www.kinksociety.xyz"
       >
+        {/* Character Card */}
+        <CharacterCard
+          name="Katie"
+          age={25}
+          bio="Sweet and caring model who loves adventures. Enjoys travel and meeting new people."
+          staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/857724468431208396-8woA3knKSTHWDDJYTFGzdu9dg3YnWa.png"
+          hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Standard_Mode_Woman_blows_a_kiss_to_the_camera-HSjUN5ngQKtw8v4enogLAfcVwlKoxF.mp4"
+          accentColor={accentColor}
+          isNew={false}
+          link={exclusiveContentLink}
+        />
+
         {/* Custom tip link with dropdown */}
         <div className="mb-4">
           <motion.div

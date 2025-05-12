@@ -6,6 +6,7 @@ import { MessageCircle, Gift, Heart, Lock } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { HelioDropdown } from "@/components/helio-checkout"
+import { CharacterCard } from "@/components/character-card"
 
 export default function AshaLinksPage() {
   const [tipDropdownOpen, setTipDropdownOpen] = useState(false)
@@ -13,12 +14,14 @@ export default function AshaLinksPage() {
 
   const accentColor = "#d191ff"
 
+  const exclusiveContentLink = "https://www.kinksociety.xyz/profiles"
+
   const links = [
     {
       title: "Exclusive Content",
       description: "Access Asha's premium content",
       icon: <Lock className="h-5 w-5" />,
-      href: "https://www.kinksociety.xyz/profiles",
+      href: exclusiveContentLink,
       highlight: true,
     },
     {
@@ -57,6 +60,18 @@ export default function AshaLinksPage() {
         email="asha@kinksociety.xyz"
         websiteUrl="https://www.kinksociety.xyz"
       >
+        {/* Character Card */}
+        <CharacterCard
+          name="Asha"
+          age={23}
+          bio="Passionate and mysterious model with an artistic soul. Loves photography and dancing."
+          staticImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-30%20at%208.05.14%E2%80%AFPM%202-cFqDV6qayCyYB7aoVfxM7AJaN6KwdL.png"
+          hoverVideo="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Asha8-ET3ZFOTMibbfEScDa9ZCTAZ5k3zvj8.mp4"
+          accentColor={accentColor}
+          isNew={false}
+          link={exclusiveContentLink}
+        />
+
         {/* Custom tip link with dropdown */}
         <div className="mb-4">
           <motion.div
