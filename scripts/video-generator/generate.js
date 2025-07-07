@@ -83,6 +83,7 @@ class VideoPageGenerator {
 
   createSlug(title) {
     return title
+      .replace(/\.mp4$/i, '') // remove file extension
       .toLowerCase()
       .replace(/[^a-z0-9\s-]/g, '')
       .replace(/\s+/g, '-')
