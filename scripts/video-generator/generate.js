@@ -1,7 +1,33 @@
 const fs = require('fs-extra');
 const path = require('path');
 const axios = require('axios');
-require('dotenv').config();
+
+// Load environment variables from .env (default) and .env.local (optional override)
+const dotenv = require('dotenv');
+// First, load default .env if it exists
+dotenv.config();
+// Then, attempt to load .env.local without overriding already-set vars
+dotenv.config({ path: path.resolve(process.cwd(), '.env.local'), override: false });
+
+// Fallback: if key env vars are still missing, try loading .env and .env.local relative to the project root (two levels up from this script)
+const projectRoot = path.resolve(__dirname, '../../');
+dotenv.config({ path: path.join(projectRoot, '.env'), override: false });
+dotenv.config({ path: path.join(projectRoot, '.env.local'), override: false });
+
+// Additional: walk up to three ancestor directories from both process.cwd() and script directory
+function loadEnvRecursive(startDir, maxDepth = 3) {
+  let dir = startDir;
+  for (let i = 0; i < maxDepth; i++) {
+    dotenv.config({ path: path.join(dir, '.env'), override: false });
+    dotenv.config({ path: path.join(dir, '.env.local'), override: false });
+    const parent = path.dirname(dir);
+    if (parent === dir) break; // reached filesystem root
+    dir = parent;
+  }
+}
+
+loadEnvRecursive(process.cwd());
+loadEnvRecursive(__dirname);
 
 class VideoPageGenerator {
   constructor() {
@@ -629,8 +655,15 @@ class VideoPageGenerator {
         <!-- Top Half: Video -->
         <div class="video-section">
             <a href="${siteUrl}" class="back-button">← Back to Home</a>
-            <div class="video-container">
-              <video id="video-player" controls playsinline poster="${video.thumbnail}" style="width:100%;height:auto;max-height:90vh;object-fit:contain;background:#000;"></video>
+            <!-- Responsive Bunny.net iframe embed -->
+            <div class="video-container" style="position:relative;padding-top:56.25%;">
+                <iframe
+                  src="https://iframe.mediadelivery.net/embed/${libraryId}/${video.guid}?autoplay=true&loop=true&preload=true&responsive=true"
+                  loading="lazy"
+                  style="border:0;position:absolute;top:0;left:0;width:100%;height:100%;"
+                  allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                  allowfullscreen
+                ></iframe>
             </div>
         </div>
         
@@ -658,23 +691,7 @@ class VideoPageGenerator {
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const video = document.getElementById('video-player');
-        if (video.canPlayType('application/vnd.apple.mpegurl')) {
-          // Safari supports HLS natively
-          video.src = '${hlsUrl}';
-        } else if (Hls.isSupported()) {
-          const hls = new Hls();
-          hls.loadSource('${hlsUrl}');
-          hls.attachMedia(video);
-        } else {
-          // Fallback MP4
-          video.src = '${mp4Url}';
-        }
-      });
-    </script>
+    <!-- Removed hls.js script and custom JS because the Bunny embed handles playback and responsiveness -->
 </body>
 </html>`;
 
