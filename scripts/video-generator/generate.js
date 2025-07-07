@@ -594,7 +594,6 @@ class VideoPageGenerator {
   async generateVideoPage(video) {
     const siteUrl = this.config.site.url;
     const libraryId = this.config.bunny.libraryId;
-    const iframeUrl = `https://iframe.mediadelivery.net/play/${libraryId}/${video.guid}`;
     const hlsUrl = video.video_url; // m3u8
     const mp4Url = video.mp4_url;
     
@@ -613,7 +612,7 @@ class VideoPageGenerator {
     <meta name="twitter:player" content="${siteUrl}/videos/${video.slug}.html">
     <meta name="twitter:player:width" content="640">
     <meta name="twitter:player:height" content="360">
-    <meta name="twitter:player:stream" content="${mp4Url}">
+    <meta name="twitter:player:stream" content="${hlsUrl}">
     <meta name="twitter:player:stream:content_type" content="video/mp4">
     
     <!-- Open Graph Meta Tags -->
@@ -631,13 +630,7 @@ class VideoPageGenerator {
         <div class="video-section">
             <a href="${siteUrl}" class="back-button">← Back to Home</a>
             <div class="video-container">
-              <iframe
-                 src="${iframeUrl}?autoplay=true&mute=false"
-                 loading="lazy"
-                 allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                 allowfullscreen
-                 style="width:100%;height:100%;border:none;">
-              </iframe>
+              <video id="video-player" controls playsinline poster="${video.thumbnail}" style="width:100%;height:auto;max-height:90vh;object-fit:contain;background:#000;"></video>
             </div>
         </div>
         
@@ -664,6 +657,24 @@ class VideoPageGenerator {
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const video = document.getElementById('video-player');
+        if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          // Safari supports HLS natively
+          video.src = '${hlsUrl}';
+        } else if (Hls.isSupported()) {
+          const hls = new Hls();
+          hls.loadSource('${hlsUrl}');
+          hls.attachMedia(video);
+        } else {
+          // Fallback MP4
+          video.src = '${mp4Url}';
+        }
+      });
+    </script>
 </body>
 </html>`;
 
