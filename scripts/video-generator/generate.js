@@ -195,22 +195,15 @@ class VideoPageGenerator {
       }
 
       .video-section {
-        padding: 24px 16px 0;
         width: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 0;
       }
 
       .video-container {
         width: 100%;
-        max-width: 448px; /* same as container */
-        aspect-ratio: 16/9;
+        aspect-ratio: 16/9; /* always landscape */
         background: #000;
-        border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
       }
 
       .video-container iframe,
@@ -242,7 +235,7 @@ class VideoPageGenerator {
       }
 
       .brand-section {
-        padding: 64px 0;
+        padding: 24px 0 32px;
         text-align: center;
       }
 
