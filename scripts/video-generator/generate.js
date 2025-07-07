@@ -195,10 +195,9 @@ class VideoPageGenerator {
       }
 
       .video-section {
-        height: 100vh;
+        padding: 24px 16px 0;
         width: 100%;
         position: relative;
-        background: #000;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -206,9 +205,15 @@ class VideoPageGenerator {
 
       .video-container {
         width: 100%;
-        height: 100%;
+        max-width: 448px; /* same as container */
+        aspect-ratio: 16/9;
+        background: #000;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
       }
 
+      .video-container iframe,
       .video-container video {
         width: 100%;
         height: 100%;
