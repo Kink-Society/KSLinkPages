@@ -224,6 +224,8 @@ class VideoPageGenerator {
 
       .video-container {
         width: 100%;
+        max-width: 448px; /* limit overall player width */
+        margin: 0 auto; /* center on page */
         aspect-ratio: 16/9; /* always landscape */
         background: #000;
         overflow: hidden;
