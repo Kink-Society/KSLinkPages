@@ -188,10 +188,7 @@ class VideoPageGenerator {
 
       /* Video Page Styles */
       .video-page {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        display: block;
       }
 
       .video-section {
@@ -235,7 +232,7 @@ class VideoPageGenerator {
       }
 
       .brand-section {
-        padding: 24px 0 32px;
+        padding: 8px 0 16px;
         text-align: center;
       }
 
