@@ -637,11 +637,10 @@ class VideoPageGenerator {
     <meta name="twitter:title" content="${video.title}">
     <meta name="twitter:description" content="${video.description}">
     <meta name="twitter:image" content="${video.thumbnail}">
-    <meta name="twitter:player" content="${siteUrl}/videos/${video.slug}.html">
+    <!-- Point directly to Bunny iframe for inline playback -->
+    <meta name="twitter:player" content="https://iframe.mediadelivery.net/embed/${libraryId}/${video.guid}?autoplay=true">
     <meta name="twitter:player:width" content="640">
     <meta name="twitter:player:height" content="360">
-    <meta name="twitter:player:stream" content="${hlsUrl}">
-    <meta name="twitter:player:stream:content_type" content="video/mp4">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="${video.title}">
@@ -656,8 +655,7 @@ class VideoPageGenerator {
     <div class="video-page">
         <!-- Top Half: Video -->
         <div class="video-section">
-            <a href="${siteUrl}" class="back-button">← Back to Home</a>
-            <!-- Responsive Bunny.net iframe embed -->
+            <!-- Responsive Bunny.net iframe embed (Back button removed) -->
             <div class="video-container" style="position:relative;padding-top:56.25%;">
                 <iframe
                   src="https://iframe.mediadelivery.net/embed/${libraryId}/${video.guid}?autoplay=true&loop=true&preload=true&responsive=true"
