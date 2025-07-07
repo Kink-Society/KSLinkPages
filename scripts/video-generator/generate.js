@@ -226,7 +226,7 @@ class VideoPageGenerator {
         width: 100%;
         max-width: 320px; /* tighter player width */
         margin: 0 auto; /* center on page */
-        aspect-ratio: 9/16; /* always landscape */
+        aspect-ratio: 2/1; /* always landscape */
         background: #000;
         overflow: hidden;
       }
