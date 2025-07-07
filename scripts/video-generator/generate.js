@@ -598,7 +598,10 @@ class VideoPageGenerator {
 
   async generateVideoPage(video) {
     const siteUrl = this.config.site.url;
-    const videoUrl = video.mp4_url || video.video_url;
+    const libraryId = this.config.bunny.libraryId;
+    const iframeUrl = `https://iframe.mediadelivery.net/play/${libraryId}/${video.guid}`;
+    const hlsUrl = video.video_url; // m3u8
+    const mp4Url = video.mp4_url;
     
     const html = `<!DOCTYPE html>
 <html lang="en">
@@ -615,7 +618,7 @@ class VideoPageGenerator {
     <meta name="twitter:player" content="${siteUrl}/videos/${video.slug}.html">
     <meta name="twitter:player:width" content="640">
     <meta name="twitter:player:height" content="360">
-    <meta name="twitter:player:stream" content="${videoUrl}">
+    <meta name="twitter:player:stream" content="${mp4Url}">
     <meta name="twitter:player:stream:content_type" content="video/mp4">
     
     <!-- Open Graph Meta Tags -->
@@ -633,10 +636,13 @@ class VideoPageGenerator {
         <div class="video-section">
             <a href="${siteUrl}" class="back-button">← Back to Home</a>
             <div class="video-container">
-                <video controls autoplay poster="${video.thumbnail}">
-                    <source src="${videoUrl}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+              <iframe
+                 src="${iframeUrl}?autoplay=true&mute=false"
+                 loading="lazy"
+                 allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                 allowfullscreen
+                 style="width:100%;height:100%;border:none;">
+              </iframe>
             </div>
         </div>
         
