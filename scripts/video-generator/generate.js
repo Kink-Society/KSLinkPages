@@ -632,15 +632,19 @@ class VideoPageGenerator {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${video.title} - Kink Society</title>
     
-    <!-- Twitter Player Card Meta Tags -->
+    <!-- Twitter Player Card Meta Tags (must meet Twitter specs) -->
     <meta name="twitter:card" content="player">
     <meta name="twitter:title" content="${video.title}">
     <meta name="twitter:description" content="${video.description}">
     <meta name="twitter:image" content="${video.thumbnail}">
-    <!-- Point directly to Bunny iframe for inline playback -->
-    <meta name="twitter:player" content="https://iframe.mediadelivery.net/embed/${libraryId}/${video.guid}?autoplay=true">
+    <meta name="twitter:site" content="@TheKinkSociety"><!-- optional but recommended -->
+    <!-- The player URL must be on our domain -->
+    <meta name="twitter:player" content="${siteUrl}/videos/${video.slug}.html">
     <meta name="twitter:player:width" content="640">
     <meta name="twitter:player:height" content="360">
+    <!-- Direct stream for autoplay -->
+    <meta name="twitter:player:stream" content="${mp4Url}">
+    <meta name="twitter:player:stream:content_type" content="video/mp4">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="${video.title}">
