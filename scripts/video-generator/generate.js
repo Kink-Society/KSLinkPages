@@ -640,8 +640,8 @@ class VideoPageGenerator {
     <meta name="twitter:site" content="@thekinksociety">
     <!-- If individual creator handle available you can populate below -->
     <!-- <meta name="twitter:creator" content="@CreatorHandle"> -->
-    <!-- Point directly to Bunny iframe (works with Player Card) -->
-    <meta name="twitter:player" content="https://iframe.mediadelivery.net/embed/${libraryId}/${video.guid}?autoplay=true&loop=true&preload=true">
+    <!-- Player must reside on same domain for Twitter to allow playback -->
+    <meta name="twitter:player" content="${siteUrl}/videos/${video.slug}.html">
     <meta name="twitter:player:width" content="640">
     <meta name="twitter:player:height" content="360">
     <!-- Direct MP4 stream for autoplay on mobile / some clients -->
